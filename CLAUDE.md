@@ -6,5 +6,4 @@ Don't add packages by writing them directly into a `package.json`.
 - We use Node 22+, which can natively run `.ts` files without `tsx`, using `node --env-file=.env <file>.ts`.
 - Kysely is used as a runtime query builder only, not as a migration or schema management tool. Schema changes go through SQL files applied with `pnpm run-sql`.
 - Instance-table primary keys are text, holding domain IDs like `T-12` and `REC-LAGER-V3`. Not UUIDs or serial integers.
-- Neon project name: `fastcampus-ontology` (winter-rice-94477938)
 - Run agent files with the project root .env file.
