@@ -1,0 +1,1157 @@
+/* ------------------------------------------------------------------ */
+/*  Layout                                                             */
+/* ------------------------------------------------------------------ */
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+}
+
+.app-shell {
+  display: flex;
+  height: 100vh;
+  background: #f6f7f9;
+}
+
+/* ---- App nav (thin icon sidebar) ---- */
+
+.app-nav {
+  width: 48px;
+  min-width: 48px;
+  background: #1c2127;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  gap: 2px;
+}
+
+.app-nav-btn.bp5-button {
+  color: rgba(255, 255, 255, 0.65);
+  border-radius: 8px;
+}
+
+.app-nav-btn.bp5-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.app-nav-btn.bp5-button.bp5-active {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+/* ---- Content sidebar ---- */
+
+.app-sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: #fff;
+  border-right: 1px solid #dce0e5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid #dce0e5;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c2127;
+}
+
+.sidebar-count {
+  font-size: 12px;
+  color: #8f99a8;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.sidebar-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 8px;
+}
+
+.type-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.type-item:hover {
+  background: #f0f2f5;
+}
+
+.type-item.selected {
+  background: #e8ecf1;
+}
+
+.type-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.type-item-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1c2127;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.type-item-count {
+  font-size: 11px;
+  color: #8f99a8;
+}
+
+/* ---- Main ---- */
+
+.app-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 36px;
+}
+
+.app-main-inner {
+  max-width: 920px;
+}
+
+/* ---- Empty state ---- */
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Detail header                                   */
+/* ------------------------------------------------------------------ */
+
+.detail-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.detail-header-icon {
+  margin-top: 2px;
+  color: #5f6b7c;
+}
+
+.detail-header-text {
+  flex: 1;
+}
+
+.detail-header-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1c2127;
+  line-height: 1.3;
+}
+
+.detail-header-name .bp5-editable-text-content,
+.detail-header-name .bp5-editable-text-input {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.detail-header-sub {
+  font-size: 13px;
+  color: #8f99a8;
+  margin-top: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Metadata card                                   */
+/* ------------------------------------------------------------------ */
+
+.meta-card {
+  background: #fff;
+  border: 1px solid #dce0e5;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 48px;
+}
+
+.meta-row {
+  display: flex;
+  align-items: baseline;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f2f5;
+  min-height: 32px;
+}
+
+.meta-row:last-child {
+  border-bottom: none;
+}
+
+.meta-label {
+  width: 130px;
+  min-width: 130px;
+  font-size: 13px;
+  color: #5f6b7c;
+}
+
+.meta-value {
+  flex: 1;
+  font-size: 13px;
+  color: #1c2127;
+  word-break: break-all;
+}
+
+.meta-value .bp5-editable-text-content,
+.meta-value .bp5-editable-text-input {
+  font-size: 13px;
+}
+
+.meta-value-mono {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 12px;
+  color: #5f6b7c;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Shared — Section card                                              */
+/* ------------------------------------------------------------------ */
+
+.section-card {
+  background: #fff;
+  border: 1px solid #dce0e5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #eff1f3;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c2127;
+  margin: 0;
+}
+
+.section-count {
+  margin-left: 8px;
+}
+
+.section-body {
+  padding: 0;
+}
+
+.section-empty {
+  padding: 24px 20px;
+  text-align: center;
+  color: #8f99a8;
+  font-size: 13px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Property list                                   */
+/* ------------------------------------------------------------------ */
+
+.prop-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  border-bottom: 1px solid #f5f6f8;
+  font-size: 13px;
+  color: #1c2127;
+}
+
+.prop-row:last-child {
+  border-bottom: none;
+}
+
+.prop-icon {
+  color: #5f6b7c;
+}
+
+.prop-name {
+  flex: 1;
+}
+
+.prop-tags {
+  display: flex;
+  gap: 6px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Links table                                     */
+/* ------------------------------------------------------------------ */
+
+.links-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.links-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  color: #8f99a8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #eff1f3;
+}
+
+.links-table td {
+  font-size: 13px;
+  color: #1c2127;
+  padding: 10px 16px;
+  border-bottom: 1px solid #f5f6f8;
+}
+
+.links-table tr:last-child td {
+  border-bottom: none;
+}
+
+.link-dir-icon {
+  color: #5f6b7c;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Action list                                     */
+/* ------------------------------------------------------------------ */
+
+.action-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #f5f6f8;
+  font-size: 13px;
+}
+
+.action-row:last-child {
+  border-bottom: none;
+}
+
+.action-icon {
+  margin-top: 2px;
+  color: #2d72d2;
+}
+
+.action-info {
+  flex: 1;
+}
+
+.action-name {
+  font-weight: 500;
+  color: #1c2127;
+}
+
+.action-desc {
+  color: #5f6b7c;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Object Explorer — Search bar                                       */
+/* ------------------------------------------------------------------ */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  max-width: 920px;
+}
+
+.search-bar .bp5-input-group {
+  flex: 1;
+}
+
+.search-all-toggle.bp5-switch {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Object Explorer — Global search                                    */
+/* ------------------------------------------------------------------ */
+
+.global-search-wrapper {
+  max-width: 920px;
+}
+
+.global-search-summary {
+  font-size: 13px;
+  color: #8f99a8;
+  margin: 0 0 16px;
+}
+
+.global-search-group {
+  margin-bottom: 24px;
+}
+
+.global-search-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.global-search-group-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c2127;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Object Explorer — Instance list                                    */
+/* ------------------------------------------------------------------ */
+
+.instance-list-wrapper {
+  max-width: 920px;
+}
+
+.instance-list-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.instance-list-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1c2127;
+  margin: 0;
+}
+
+.instance-list-count {
+  font-size: 13px;
+  color: #8f99a8;
+}
+
+.instance-table.bp5-html-table {
+  width: 100%;
+}
+
+.instance-table.bp5-html-table tbody tr {
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Object Explorer — Object detail                                    */
+/* ------------------------------------------------------------------ */
+
+.obj-detail-wrapper {
+  max-width: 960px;
+}
+
+/* ---- Header ---- */
+
+.obj-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.obj-back-btn.bp5-button {
+  margin-right: 2px;
+}
+
+.obj-header-icon {
+  color: #5f6b7c;
+}
+
+.obj-header-text {
+  flex: 1;
+}
+
+.obj-header-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1c2127;
+  line-height: 1.3;
+}
+
+.obj-header-sub {
+  font-size: 13px;
+  color: #8f99a8;
+  margin-top: 1px;
+}
+
+/* ---- Action strip ---- */
+
+.obj-action-strip {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* ---- Two-column layout ---- */
+
+.obj-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ---- Property rows ---- */
+
+.obj-prop-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 20px;
+  border-bottom: 1px solid #f5f6f8;
+  font-size: 13px;
+}
+
+.obj-prop-row:last-child {
+  border-bottom: none;
+}
+
+.obj-prop-label {
+  width: 140px;
+  min-width: 140px;
+  color: #5f6b7c;
+}
+
+.obj-prop-value {
+  flex: 1;
+  color: #1c2127;
+  word-break: break-word;
+}
+
+.obj-json {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  background: #f6f7f9;
+  padding: 6px 8px;
+  border-radius: 4px;
+  display: block;
+}
+
+.obj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* ---- Link groups ---- */
+
+.obj-link-group {
+  padding: 6px 20px 10px;
+  border-bottom: 1px solid #f5f6f8;
+}
+
+.obj-link-group:last-child {
+  border-bottom: none;
+}
+
+.obj-link-group-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8f99a8;
+  margin-bottom: 6px;
+  padding-top: 4px;
+}
+
+.obj-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  cursor: pointer;
+  color: #2d72d2;
+  font-size: 13px;
+  transition: color 0.1s;
+}
+
+.obj-link-item:hover {
+  color: #1c6dba;
+}
+
+.obj-link-arrow {
+  color: #8f99a8;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Action dialog                                                      */
+/* ------------------------------------------------------------------ */
+
+.action-result-json {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 11px;
+  margin: 8px 0 0;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Batch Investigation Workspace                                      */
+/* ------------------------------------------------------------------ */
+
+.bi-workspace {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 36px;
+}
+
+.bi-header {
+  margin-bottom: 22px;
+}
+
+.bi-header-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1c2127;
+  margin: 0;
+}
+
+.bi-header-sub {
+  font-size: 13px;
+  color: #8f99a8;
+  margin-top: 2px;
+}
+
+/* ---- Metric cards ---- */
+
+.bi-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metric-card {
+  background: #fff;
+  border: 1px solid #dce0e5;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metric-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.metric-card-icon {
+  color: #5f6b7c;
+}
+
+.metric-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8f99a8;
+}
+
+.metric-card-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1c2127;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-card-sub {
+  font-size: 12px;
+  color: #8f99a8;
+}
+
+.metric-card.intent-warning .metric-card-value {
+  color: #bf7326;
+}
+
+.metric-card.intent-danger .metric-card-value {
+  color: #c23030;
+}
+
+/* ---- Body: table + detail panel ---- */
+
+.bi-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  gap: 20px;
+  align-items: start;
+}
+
+.bi-filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.bi-filter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #5f6b7c;
+}
+
+.bi-behind-toggle.bp5-switch {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+/* ---- Batch table ---- */
+
+.batch-table.bp5-html-table {
+  width: 100%;
+}
+
+.batch-table.bp5-html-table tbody tr {
+  cursor: pointer;
+}
+
+.batch-table.bp5-html-table tbody tr.selected {
+  background: #e8ecf1;
+}
+
+.sugar-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sugar-current {
+  font-variant-numeric: tabular-nums;
+  color: #1c2127;
+}
+
+.tank-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tank-maint-icon {
+  color: #bf7326;
+}
+
+.bi-detail-panel {
+  position: sticky;
+  top: 0;
+  max-height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+
+/* ---- Detail panel: header ---- */
+
+.detail-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eff1f3;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.detail-panel-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c2127;
+  margin: 0;
+}
+
+.detail-panel-sub {
+  font-size: 12px;
+  color: #8f99a8;
+  margin-top: 1px;
+}
+
+/* ---- Detail panel: collapsible sections ---- */
+
+.detail-section {
+  border-bottom: 1px solid #eff1f3;
+}
+
+.detail-section:last-child {
+  border-bottom: none;
+}
+
+.detail-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.detail-section-header:hover {
+  background: #f6f7f9;
+}
+
+.detail-section-icon {
+  color: #5f6b7c;
+}
+
+.detail-section-title {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1c2127;
+}
+
+.detail-section-body {
+  padding: 2px 16px 14px;
+}
+
+/* ---- Field rows ---- */
+
+.detail-field {
+  display: flex;
+  gap: 10px;
+  padding: 5px 0;
+  font-size: 12px;
+  align-items: baseline;
+}
+
+.detail-field-label {
+  width: 104px;
+  min-width: 104px;
+  color: #5f6b7c;
+}
+
+.detail-field-value {
+  flex: 1;
+  color: #1c2127;
+  word-break: break-word;
+}
+
+.detail-subtle-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8f99a8;
+  margin: 4px 0 2px;
+}
+
+.detail-note {
+  font-size: 12px;
+  color: #404854;
+  background: #f6f7f9;
+  border-radius: 4px;
+  padding: 8px 10px;
+  line-height: 1.45;
+}
+
+.detail-empty {
+  color: #8f99a8;
+  font-size: 12px;
+  padding: 4px 0;
+}
+
+/* ---- Sugar curve ---- */
+
+.curve-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.curve-pt {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #eef1f5;
+  color: #5f6b7c;
+}
+
+.curve-pt.hl {
+  background: #2d72d2;
+  color: #fff;
+  font-weight: 600;
+}
+
+.curve-target {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #5f6b7c;
+}
+
+.curve-target strong {
+  color: #2d72d2;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Maintenance + quality items ---- */
+
+.maint-item,
+.qt-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f6f8;
+  font-size: 12px;
+}
+
+.maint-item:last-child,
+.qt-item:last-child {
+  border-bottom: none;
+}
+
+.maint-item-head,
+.qt-item-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+  flex-wrap: wrap;
+}
+
+.maint-item-title {
+  font-weight: 600;
+  color: #1c2127;
+  text-transform: capitalize;
+}
+
+.maint-item-meta {
+  color: #8f99a8;
+  font-size: 11px;
+}
+
+.maint-item-notes {
+  color: #404854;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+.qt-metrics {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 3px;
+}
+
+.qt-metric {
+  font-variant-numeric: tabular-nums;
+  color: #1c2127;
+}
+
+.qt-metric span {
+  color: #8f99a8;
+}
+
+/* ---- Audit rows ---- */
+
+.audit-row {
+  border-bottom: 1px solid #f5f6f8;
+}
+
+.audit-row:last-child {
+  border-bottom: none;
+}
+
+.audit-row-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.audit-row-action {
+  font-weight: 600;
+  color: #1c2127;
+}
+
+.audit-row-actor {
+  color: #5f6b7c;
+}
+
+.audit-row-time {
+  margin-left: auto;
+  color: #8f99a8;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.audit-detail {
+  padding: 0 0 8px 18px;
+}
+
+.audit-json {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  background: #f6f7f9;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin: 2px 0 6px;
+  overflow-x: auto;
+}
+
+.audit-empty {
+  color: #8f99a8;
+  font-size: 12px;
+  padding: 4px 0;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Proposals Queue                                                    */
+/* ------------------------------------------------------------------ */
+
+/* Full-width scrolling workspace (not the 920px instance-list wrapper), so the
+   8-column table has room and never clips. */
+.proposals-workspace {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 36px;
+}
+
+/* Horizontal-scroll fallback when the window is too narrow for all columns. */
+.proposals-scroll {
+  overflow-x: auto;
+}
+
+.proposals-table.bp5-html-table {
+  width: 100%;
+  min-width: 1040px;
+}
+
+.proposals-table.bp5-html-table tbody tr {
+  cursor: default;
+}
+
+/* --- Lanes (Escalated / Pending) --- */
+
+.proposals-lane {
+  margin-bottom: 28px;
+}
+
+.proposals-lane-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.proposals-lane-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.proposals-lane-hint {
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+/* The escalation note is prose a reviewer has to actually read — give it room
+   and let it wrap rather than truncating. */
+.proposal-escalation {
+  min-width: 240px;
+  max-width: 360px;
+  white-space: normal;
+}
+
+.proposal-escalation-note {
+  line-height: 1.4;
+}
+
+.proposal-escalation-meta {
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+/* The escalated lane carries one more column than the pending lane. */
+.proposals-lane .proposals-table.bp5-html-table {
+  min-width: 1040px;
+}
+
+.proposals-table td {
+  vertical-align: top;
+}
+
+.proposal-date {
+  white-space: nowrap;
+  color: #5f6b7c;
+  font-size: 12px;
+}
+
+.proposal-rationale {
+  min-width: 260px;
+  max-width: 420px;
+  font-size: 13px;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+.proposal-params {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 200px;
+  max-width: 320px;
+}
+
+.proposal-params .bp5-code {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.proposal-param {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.proposal-param-key {
+  color: #8f99a8;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.proposal-row-error {
+  margin-top: 8px;
+  max-width: 260px;
+}
